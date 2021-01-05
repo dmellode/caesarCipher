@@ -1,0 +1,51 @@
+CIS 2500 A3 Dean D'Mello
+Q1
+Functions:
+letter_count: counts letters in a string
+create_freq_table: Creates an empty int table for letters of the alphabet and their frequency in text
+add_letters: Fills an empty int table for letters of the alphabet and their frequency in text
+
+
+Main:
+frequency_table: Program that prints frequency table of given texts to stdout
+Usage: ./frequency_table -F filename
+ -F is optional, prints to stdin without filename
+
+ Q2
+ Functions:
+ offset: Replaces letters of the alphabet with their coresponding numbers (offests)
+ chi_sq: Formula to calculate chi squared values of different shifts
+ encode_shift: Finds the lowest chi_value to determine most accurate encode shift
+ decode_shift: Uses encode_shift to determine the decode shift
+ encode: Shifts a single character according to given shift value
+ file_size: Calculates size of file in bytes
+ read_char: Reads in characters from a file into a string
+ rot_any: Decodes a string of text with a given shift value
+ tflag: Prints alphabet frequency table for given text
+ Xflag: Prints table for chi squared values of each shift
+
+ Main:
+ decode: Program that automates determining of Caesar encoded text and decodes it
+ Usage: ./decode -sStxn -F Infile -O Outfile
+ -sStxn and -F and -O are all optional, can read from stdin or print to stdout
+
+Q3
+ Functions:
+ offset: Replaces letters of the alphabet with their coresponding numbers (offests)
+ chi_sq: Formula to calculate chi squared values of different shifts
+ encode_shift: Finds the lowest chi_value to determine most accurate encode shift
+ decode_shift: Uses encode_shift to determine the decode shift
+ encode: Shifts a single character according to given shift value
+ file_size: Calculates size of file in bytes
+ read_char: Reads in characters from a file into a string
+ rot_any: Decodes a string of text with a given shift value
+ tflag: Prints alphabet frequency table for given text
+ Xflag: Prints table for chi squared values of each shift
+
+ Main:
+ copyrecords: Purpose: Program that automates determining of Caesar encoded text and copys records of binary files into other files. Decrypts files if necessary.
+Usage: ./copyrecords -F infile.rec -Outfile.rec -D textfile.txt -r
+ -D and -r are optional
+
+ To reverse the records I seeked to the end of the file, went one record back, and read it in, taking me back to the end of the file.
+ Then I went back two records and read forward 1, repeating the process until I read in all records up to the first one. 
